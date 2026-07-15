@@ -1,0 +1,100 @@
+{
+    "id": "a836e733-1184-4f06-93c9-e8dfb9036a55",
+    "task_name": "dynamo/log-report",
+    "trial_name": "fixed_repo__ojTuptd",
+    "trial_uri": "file:///mnt/c/Users/Vivek/Downloads/fixed_repo/jobs/2026-07-15__02-10-55/fixed_repo__ojTuptd",
+    "task_id": {
+        "path": "."
+    },
+    "source": null,
+    "task_checksum": "899de366461229ff8519f22c85d0b62906f4c1beb07b803caaac65f2a4f75017",
+    "config": {
+        "task": {
+            "path": ".",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "fixed_repo__ojTuptd",
+        "trials_dir": "jobs/2026-07-15__02-10-55",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "nop",
+            "import_path": null,
+            "model_name": null,
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "e6e337ee-9a52-4018-ad3f-d02cd40dcfe5"
+    },
+    "agent_info": {
+        "name": "nop",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-07-15T02:10:56.618519Z",
+    "finished_at": "2026-07-15T02:11:11.962891Z",
+    "environment_setup": {
+        "started_at": "2026-07-15T02:10:56.720043Z",
+        "finished_at": "2026-07-15T02:10:59.948281Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-07-15T02:10:59.948334Z",
+        "finished_at": "2026-07-15T02:10:59.948388Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-07-15T02:10:59.948626Z",
+        "finished_at": "2026-07-15T02:10:59.948667Z"
+    },
+    "verifier": {
+        "started_at": "2026-07-15T02:11:00.072637Z",
+        "finished_at": "2026-07-15T02:11:00.720715Z"
+    },
+    "step_results": null
+}

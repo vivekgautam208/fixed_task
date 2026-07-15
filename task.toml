@@ -1,0 +1,32 @@
+artifacts = ["/app/report.json"]
+
+[task]
+name = "dynamo/log-report"
+description = "Parse an Apache-style access log into a deterministic JSON summary report."
+
+[metadata]
+category = "data_processing_and_etl"
+subcategory = "text_processing"
+task_objective = ["transform", "generate"]
+artifact_type = ["text_or_log_file", "generated_output_artifact"]
+expert_time_estimate_hours = 0.3
+model_tested = "GPT-5.4"
+agent_tested = "Terminus-2"
+difficulty_explanation = "The task is small but requires exact parsing of Apache-style access-log records. The solver must correctly distinguish the client address from the HTTP request target. It must aggregate repeated IP addresses and request targets without hardcoding line positions. The generated JSON must also match the required schema, value types, and output path exactly."
+solution_explanation = "Read every non-empty line from /app/access.log and count it as one request. Extract the first whitespace-separated field as the client IP address and extract the request target from the quoted HTTP request. Count distinct client IP addresses and the frequency of each request target, then select the uniquely most frequent target. Write the three resulting values to /app/report.json as a JSON object containing no additional keys."
+verification_explanation = "The verifier first checks that /app/report.json is valid UTF-8 JSON with exactly the documented top-level keys. Separate tests verify total_requests, unique_ips, and top_path against fixed expected values independently derived from the supplied access-log fixture. Fixed expectations prevent an agent from changing /app/access.log and causing the verifier to accept different answers. The shell verifier initializes the reward to zero, runs pytest without installing dependencies, emits CTRF output, and changes the reward to one only when every test passes."
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 120.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []

@@ -1,0 +1,30 @@
+{
+    "id": "e6e337ee-9a52-4018-ad3f-d02cd40dcfe5",
+    "started_at": "2026-07-15T02:10:55.172734",
+    "finished_at": "2026-07-15T02:11:11.971496",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "nop__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "fixed_repo__ojTuptd"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}
